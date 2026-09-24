@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lead To Database | B2B Leads & Business Data</title>
+
+<meta name="description" content="Explore business email lists, B2B databases, phone number lists, social media leads and business datasets.">
+<meta name="keywords" content="B2B database, business email list, phone number list, business leads, lead database, email database">
+
+<style>
+:root{
+    --bg:#f5f7ff;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#667085;
+    --primary:#635bff;
+    --secondary:#00c2ff;
+    --pink:#ff4ecd;
+    --green:#00c389;
+    --orange:#ff9f43;
+    --border:#e8eaf3;
+    --shadow:0 15px 40px rgba(31,41,90,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(99,91,255,.12),transparent 25%),
+        radial-gradient(circle at 90% 15%,rgba(0,194,255,.12),transparent 25%),
+        var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(220,225,240,.7);
+}
+
+.nav-inner{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    background:linear-gradient(90deg,#635bff,#00bfff,#ff4ecd);
+    -webkit-background-clip:text;
+    color:transparent;
+    white-space:nowrap;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-weight:600;
+    font-size:14px;
+    color:#344054;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:#635bff;
+    color:white;
+    padding:9px 13px;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    padding:95px 0 75px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-content{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+.badge{
+    display:inline-flex;
+    padding:8px 15px;
+    border-radius:30px;
+    background:#eeeaff;
+    color:#554ce0;
+    font-weight:800;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,72px);
+    line-height:1.05;
+    font-weight:950;
+    letter-spacing:-3px;
+    margin-bottom:22px;
+}
+
+.gradient-text{
+    background:linear-gradient(
+        90deg,
+        #635bff,
+        #00a8ff,
+        #00c389,
+        #ff4ecd
+    );
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    color:var(--muted);
+    font-size:18px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:32px;
+}
+
+.btn{
+    padding:14px 24px;
+    border-radius:14px;
+    font-weight:800;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.btn-primary{
+    color:white;
+    background:linear-gradient(135deg,#635bff,#00a8ff);
+    box-shadow:0 12px 30px rgba(99,91,255,.25);
+}
+
+.btn-secondary{
+    background:white;
+    border:1px solid var(--border);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* STATS */
+
+.stats{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    background:rgba(255,255,255,.8);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.stat-number{
+    font-size:30px;
+    font-weight:900;
+    background:linear-gradient(90deg,#635bff,#ff4ecd);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.stat-label{
+    font-size:13px;
+    color:var(--muted);
+}
+
+/* SECTION */
+
+section{
+    padding:75px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:40px;
+    line-height:1.1;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:850px;
+    margin:0 auto 30px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 22px 18px 52px;
+    border-radius:17px;
+    border:1px solid var(--border);
+    background:white;
+    outline:none;
+    font-size:16px;
+    box-shadow:var(--shadow);
+}
+
+.search-icon{
+    position:absolute;
+    left:19px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:20px;
+}
+
+/* FILTERS */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:1px solid var(--border);
+    background:white;
+    padding:10px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.25s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    color:white;
+    border-color:transparent;
+    background:linear-gradient(90deg,#635bff,#00a8ff);
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:25px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card:before{
+    content:"";
+    position:absolute;
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#635bff,#ff4ecd);
+    opacity:.08;
+    right:-30px;
+    top:-30px;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 22px 50px rgba(31,41,90,.15);
+}
+
+.card-icon{
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    font-size:24px;
+    margin-bottom:17px;
+    background:linear-gradient(135deg,#ebe9ff,#dff7ff);
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.card-link{
+    color:#635bff;
+    font-weight:800;
+    font-size:14px;
+}
+
+/* CATEGORY */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.category{
+    background:white;
+    padding:24px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+}
+
+.category .emoji{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.category h3{
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.category span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* VENDORS */
+
+.vendor-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.vendor{
+    padding:28px;
+    border-radius:22px;
+    background:white;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+}
+
+.vendor h3{
+    margin-bottom:8px;
+}
+
+.vendor p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+/* CTA */
+
+.cta{
+    background:
+        linear-gradient(135deg,#635bff,#008cff,#00c389);
+    color:white;
+    border-radius:30px;
+    padding:60px 30px;
+    text-align:center;
+    box-shadow:0 25px 60px rgba(42,88,220,.25);
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:auto;
+    opacity:.9;
+}
+
+.cta-buttons{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.cta .btn{
+    background:white;
+    color:#2634a5;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:70px;
+    padding:55px 0 30px;
+    background:#101426;
+    color:white;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-logo{
+    font-size:25px;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.footer-about{
+    color:#aab1c5;
+    max-width:380px;
+    font-size:14px;
+}
+
+footer h4{
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:8px 0;
+}
+
+footer li a{
+    color:#aab1c5;
+    font-size:14px;
+}
+
+footer li a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #292e43;
+    margin-top:35px;
+    padding-top:22px;
+    color:#8991a9;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* FLOATING CONTACT */
+
+.floating{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:900;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float-btn{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:white;
+    font-size:21px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.telegram{
+    background:#229ED9;
+}
+
+/* DARK MODE */
+
+body.dark{
+    --bg:#0b1020;
+    --card:#12182a;
+    --text:#f5f7ff;
+    --muted:#aab1c5;
+    --border:#252d43;
+}
+
+body.dark .navbar{
+    background:rgba(11,16,32,.9);
+}
+
+body.dark .nav-links a{
+    color:#d6daea;
+}
+
+body.dark .search-box input,
+body.dark .filter-btn,
+body.dark .category,
+body.dark .vendor,
+body.dark .stat,
+body.dark .card,
+body.dark .btn-secondary{
+    background:#12182a;
+    color:#f5f7ff;
+}
+
+body.dark .search-box input{
+    border-color:#252d43;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:white;
+        padding:20px;
+        flex-direction:column;
+        border-bottom:1px solid var(--border);
+    }
+
+    body.dark .nav-links{
+        background:#101626;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:70px 0 50px;
+    }
+
+    .hero h1{
+        letter-spacing:-1.5px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats,
+    .grid,
+    .category-grid,
+    .vendor-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .cta h2{
+        font-size:31px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+<div class="container nav-inner">
+
+<a href="https://leadtodatabase.com/" class="logo">
+Lead To Database
+</a>
+
+<nav class="nav-links" id="navLinks">
+<a href="#datasets">Datasets</a>
+<a href="#categories">Categories</a>
+<a href="#vendors">Vendors</a>
+<a href="https://leadtodatabase.com/about">About</a>
+<a href="https://leadtodatabase.com/contact">Contact</a>
+<a href="https://leadtodatabase.com/login">Login</a>
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="badge">🚀 Business Data & Lead Discovery Platform</div>
+
+<h1>
+Find Better
+<span class="gradient-text">Business Data</span>
+for Your Growth
+</h1>
+
+<p>
+Explore business email lists, B2B databases, phone number lists,
+social media leads and targeted datasets for modern sales and marketing.
+</p>
+
+<div class="hero-buttons">
+
+<a class="btn btn-primary"
+href="#datasets">
+🔎 Explore Datasets
+</a>
+
+<a class="btn btn-secondary"
+href="https://leadtodatabase.com/categories">
+🗂️ Browse Categories
+</a>
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<div class="stat-number" id="datasetCount">0</div>
+<div class="stat-label">Featured Datasets</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">8+</div>
+<div class="stat-label">Data Categories</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">2</div>
+<div class="stat-label">Featured Vendors</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Online Access</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DATASETS -->
+
+<section id="datasets">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Datasets</h2>
+<p>Search and explore targeted business data collections.</p>
+</div>
+
+
+<div class="search-box">
+
+<span class="search-icon">🔎</span>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search datasets, countries or keywords..."
+onkeyup="filterDatasets()"
+>
+
+</div>
+
+
+<div class="filters">
+
+<button class="filter-btn active"
+onclick="filterCategory('all',this)">
+All
+</button>
+
+<button class="filter-btn"
+onclick="filterCategory('email',this)">
+📧 Email Lists
+</button>
+
+<button class="filter-btn"
+onclick="filterCategory('b2b',this)">
+🏢 B2B
+</button>
+
+<button class="filter-btn"
+onclick="filterCategory('country',this)">
+🌍 Country Data
+</button>
+
+</div>
+
+
+<div class="grid" id="datasetGrid">
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Mozambique business email list email">
+<div class="card-icon">🇲🇿</div>
+<h3>Mozambique Business Email List</h3>
+<p>Explore targeted business email data for Mozambique.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/mozambique-business-email-list">
+View Dataset →
+</a>
+</div>
+
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Montenegro business email list email">
+<div class="card-icon">🇲🇪</div>
+<h3>Montenegro Business Email List</h3>
+<p>Business-focused email dataset for Montenegro.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/montenegro-business-email-list">
+View Dataset →
+</a>
+</div>
+
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Mongolia business email list email">
+<div class="card-icon">🇲🇳</div>
+<h3>Mongolia Business Email List</h3>
+<p>Targeted business email information for Mongolia.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/mongolia-business-email-list">
+View Dataset →
+</a>
+</div>
+
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Monaco business email list email">
+<div class="card-icon">🇲🇨</div>
+<h3>Monaco Business Email List</h3>
+<p>Business email dataset focused on Monaco.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/monaco-business-email-list">
+View Dataset →
+</a>
+</div>
+
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Moldova business email list email">
+<div class="card-icon">🇲🇩</div>
+<h3>Moldova Business Email List</h3>
+<p>Business email data for targeted outreach in Moldova.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/moldova-business-email-list">
+View Dataset →
+</a>
+</div>
+
+
+<div class="card dataset-card"
+data-category="email country"
+data-search="Micronesia business email list email">
+<div class="card-icon">🇫🇲</div>
+<h3>Micronesia Business Email List</h3>
+<p>Explore business email data related to Micronesia.</p>
+<a class="card-link"
+href="https://leadtodatabase.com/dataset/micronesia-business-email-list">
+View Dataset →
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Explore Categories</h2>
+<p>Discover different types of business and lead datasets.</p>
+</div>
+
+
+<div class="category-grid">
+
+<a class="category"
+href="https://leadtodatabase.com/category/b2b-database">
+<div class="emoji">🏢</div>
+<h3>B2B Database</h3>
+<span>Business-to-business data</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/consumer-database">
+<div class="emoji">👥</div>
+<h3>Consumer Database</h3>
+<span>Consumer-focused datasets</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/email-databases">
+<div class="emoji">📧</div>
+<h3>Email Databases</h3>
+<span>Business email lists</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/phone-number-lists">
+<div class="emoji">📱</div>
+<h3>Phone Number Lists</h3>
+<span>Phone contact datasets</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/social-media-leads">
+<div class="emoji">📣</div>
+<h3>Social Media Leads</h3>
+<span>Social lead datasets</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/telegram-number-database">
+<div class="emoji">✈️</div>
+<h3>Telegram Number Database</h3>
+<span>Telegram-focused datasets</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/web-dataset">
+<div class="emoji">🌐</div>
+<h3>Web Dataset</h3>
+<span>Web-based data collections</span>
+</a>
+
+
+<a class="category"
+href="https://leadtodatabase.com/category/whatsapp-number-database">
+<div class="emoji">💬</div>
+<h3>WhatsApp Number Database</h3>
+<span>WhatsApp-related datasets</span>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VENDORS -->
+
+<section id="vendors">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Vendors</h2>
+<p>Explore vendors offering business data and lead resources.</p>
+</div>
+
+
+<div class="vendor-grid">
+
+<div class="vendor">
+
+<div class="card-icon">🌎</div>
+
+<h3>Dataworld Inc</h3>
+
+<p>
+Explore vendor information and available data resources.
+</p>
+
+<a class="card-link"
+href="https://leadtodatabase.com/vendor/dataworld-inc">
+View Vendor →
+</a>
+
+</div>
+
+
+<div class="vendor">
+
+<div class="card-icon">📊</div>
+
+<h3>Mega-Leads</h3>
+
+<p>
+Discover vendor information and business data resources.
+</p>
+
+<a class="card-link"
+href="https://leadtodatabase.com/vendor/Mega-Leads">
+View Vendor →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>Looking for Targeted Business Data?</h2>
+
+<p>
+Browse datasets, explore categories, discover vendors and find
+data resources that match your business research and outreach needs.
+</p>
+
+<div class="cta-buttons">
+
+<a class="btn"
+href="https://leadtodatabase.com/datasets">
+📊 Browse Datasets
+</a>
+
+<a class="btn"
+href="https://leadtodatabase.com/contact">
+📩 Contact Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+Lead To Database
+</div>
+
+<p class="footer-about">
+A business data discovery platform for exploring
+B2B databases, email lists, phone number lists,
+social media leads and web datasets.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>Explore</h4>
+
+<ul>
+
+<li>
+<a href="https://leadtodatabase.com/datasets">
+Datasets
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/categories">
+Categories
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/vendors">
+Vendors
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/about">
+About
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Account</h4>
+
+<ul>
+
+<li>
+<a href="https://leadtodatabase.com/login">
+Login
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/vendor-login.php">
+Vendor Login
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/vendor-register.php">
+Vendor Register
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/vendor/">
+Vendor Directory
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Legal & Contact</h4>
+
+<ul>
+
+<li>
+<a href="https://leadtodatabase.com/contact">
+Contact
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/privacy-policy">
+Privacy Policy
+</a>
+</li>
+
+<li>
+<a href="https://leadtodatabase.com/terms">
+Terms
+</a>
+</li>
+
+<li>
+<a href="https://t.me/xhie01">
+Telegram
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Lead To Database. All rights reserved.
+</span>
+
+<span>
+Business Data • Lead Discovery • B2B Resources
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING CONTACT -->
+
+<div class="floating">
+
+<a
+class="float-btn whatsapp"
+href="https://wa.me/639858085805"
+target="_blank"
+title="WhatsApp">
+☎
+</a>
+
+<a
+class="float-btn telegram"
+href="https://t.me/xhie01"
+target="_blank"
+title="Telegram">
+✈
+</a>
+
+</div>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("show");
+
+}
+
+
+/* DATASET SEARCH */
+
+let activeCategory = "all";
+
+function filterDatasets(){
+
+    const input =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".dataset-card");
+
+    let visible = 0;
+
+    cards.forEach(card => {
+
+        const text =
+            card.dataset.search.toLowerCase();
+
+        const category =
+            card.dataset.category.toLowerCase();
+
+        const searchMatch =
+            text.includes(input);
+
+        const categoryMatch =
+            activeCategory === "all" ||
+            category.includes(activeCategory);
+
+        if(searchMatch && categoryMatch){
+
+            card.style.display = "block";
+            visible++;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* CATEGORY FILTER */
+
+function filterCategory(category,button){
+
+    activeCategory = category;
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn =>
+        btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    filterDatasets();
+
+}
+
+
+/* DATASET COUNTER */
+
+document.getElementById("datasetCount").textContent =
+    document.querySelectorAll(".dataset-card").length;
+
+
+/* SIMPLE DARK MODE */
+
+const themeButton = document.createElement("button");
+
+themeButton.innerHTML = "🌙";
+
+themeButton.style.position = "fixed";
+themeButton.style.left = "20px";
+themeButton.style.bottom = "20px";
+themeButton.style.zIndex = "999";
+themeButton.style.width = "48px";
+themeButton.style.height = "48px";
+themeButton.style.border = "0";
+themeButton.style.borderRadius = "50%";
+themeButton.style.cursor = "pointer";
+themeButton.style.fontSize = "20px";
+themeButton.style.boxShadow = "0 8px 25px rgba(0,0,0,.18)";
+
+themeButton.onclick = function(){
+
+    document.body.classList.toggle("dark");
+
+    themeButton.innerHTML =
+        document.body.classList.contains("dark")
+        ? "☀️"
+        : "🌙";
+
+};
+
+document.body.appendChild(themeButton);
+
+</script>
+
+</body>
+</html>
